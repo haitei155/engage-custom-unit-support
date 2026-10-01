@@ -1,0 +1,22 @@
+[package]
+name = "engage_dining_pair_fix"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+[workspace]
+exclude = ["dependencies/engage-il2cpp-0.1.0-reconstructed", "tools/nro-converter"]
+[dependencies]
+skyline = "0.6"
+horizon-svc = { path = "dependencies/horizon-svc", features = ["svc-impl"] }
+[lib]
+crate-type = ["cdylib"]
+[profile.release]
+panic = "abort"
+lto = "thin"
+strip = true
+[patch.crates-io]
+getrandom = { git = "https://github.com/skyline-rs/getrandom" }
+
+[features]
+default = []
+diagnostics = []
