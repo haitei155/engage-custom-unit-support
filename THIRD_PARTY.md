@@ -6,6 +6,8 @@ The root Apache-2.0 license applies to project-owned additions and documentation
 
 | 组件 / Component | 来源 / Origin | 许可范围 / License scope |
 |---|---|---|
+| `dependencies/unity-nx-0.1.0-local` | [DivineDragonFanClub/unity-nx](https://github.com/DivineDragonFanClub/unity-nx), reused local snapshot | MPL-2.0; original LICENSE-MPL and NOTICE retained. Used by Loading-dot support. |
+| `dependencies/cobalt-mods` | [Raytwo/Cobalt](https://github.com/Raytwo/Cobalt), locally used mods crate | Upstream license not specified in this crate snapshot; implementation and authorship retained, not relicensed as Apache-2.0. Used by Loading-dot support. |
 | `dependencies/horizon-svc` | [skyline-rs/horizon-svc](https://github.com/skyline-rs/horizon-svc), `ced970c` | No explicit standalone LICENSE in the copied snapshot; retain authorship and review permission before distribution. |
 | `tools/dependencies/linkle-0.2.11` | [MegatonHammer/linkle](https://github.com/MegatonHammer/linkle) | MIT / Apache-2.0 per Cargo manifest; bundled license files retained where supplied. |
 

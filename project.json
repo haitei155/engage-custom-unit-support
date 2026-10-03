@@ -1,14 +1,14 @@
 {
-  "project": "engage-dining-pair-fix",
-  "crate_name": "engage_dining_pair_fix",
-  "nro": "engage_dining_pair_fix.nro",
+  "project": "engage-custom-unit-support",
+  "crate_name": "engage_custom_unit_support",
+  "nro": "engage_custom_unit_support.nro",
   "game": "Fire Emblem Engage",
   "game_version": "2.0.0",
   "cobalt_baseline": "1.31.0",
   "license": "Apache-2.0 (project-owned contributions; see THIRD_PARTY.md)",
-  "prepared": "2026-10-02",
-  "source_status": "Release source snapshot; see Releases/RELEASE_NOTES.md for binary provenance and validation.",
-  "release_tag": "v0.1",
-  "published": true,
-  "repository": "https://github.com/haitei155/engage-dining-pair-fix"
+  "prepared": "2026-10-03",
+  "source_status": "Paired-dining fallback and six-frame Loading dot support, v0.2.0.",
+  "release_tag": "v0.2",
+  "repository": "https://github.com/haitei155/engage-custom-unit-support",
+  "version": "0.2.0"
 }

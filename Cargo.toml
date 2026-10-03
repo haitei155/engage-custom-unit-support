@@ -1,6 +1,6 @@
 [package]
-name = "engage_dining_pair_fix"
-version = "0.1.0"
+name = "engage_custom_unit_support"
+version = "0.2.0"
 edition = "2021"
 license = "Apache-2.0"
 [workspace]
@@ -8,6 +8,8 @@ exclude = ["dependencies/engage-il2cpp-0.1.0-reconstructed", "tools/nro-converte
 [dependencies]
 skyline = "0.6"
 horizon-svc = { path = "dependencies/horizon-svc", features = ["svc-impl"] }
+unity-nx = { path = "dependencies/unity-nx-0.1.0-local" }
+mods = { path = "dependencies/cobalt-mods" }
 [lib]
 crate-type = ["cdylib"]
 [profile.release]

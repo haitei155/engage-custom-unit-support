@@ -1,4 +1,5 @@
-//! Minimal standalone missing-pair-label fallback. No outfit or sequence-stage hooks.
+//! Native dining label fallback plus optional Loading dot resources for custom units.
+mod loading_dots;
 #[cfg(feature = "diagnostics")]
 use std::io::Write;
 type P = *mut u8;
@@ -54,5 +55,6 @@ pub fn main() {
         trace!("unsupported executable: no hook installed");return;
     }
     skyline::install_hooks!(fee_dining_v3_label);
+    loading_dots::install();
     trace!("installed ONE label fallback hook; no cooking-stage or outfit hooks");
 }

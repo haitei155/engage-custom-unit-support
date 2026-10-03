@@ -1,22 +1,14 @@
-# v0.1 — 双人用餐对话回退修复 / Paired Dining Dialogue Fallback Fix
+# v0.2 — Engage Custom Unit Support
 
-缺少双人用餐专用对话标签时，回退到游戏原生料理评价台词选择；已有有效标签保持原流程。
+- 项目由 engage-dining-pair-fix 更名为 engage-custom-unit-support；NRO 更名为 engage_custom_unit_support.nro。
+- 延续 v0.1 的双人用餐对话回退。
+- 原生 Loading 缺图时优先读取透明 288×48 六帧 PNG，保留对应 Bundle 后备。
+- 修正重复 Loading 的材质清理／重建与贴图卸载保护，失效缓存重新读取。
+- 中英 README 提供作者本人制作的琉弥艾尔六帧 PNG 样例及接入说明；其他人物的六帧素材需由 MOD 制作者自行制作。
+- 正式构建不输出插件诊断日志。
 
-Falls back to native meal-evaluation dialogue when a paired-dining label is missing, preserving valid paired dialogue.
+升级时移除旧 engage_dining_pair_fix.nro，使用新 NRO 后完整重启游戏。如果所使用的整合包已包含本插件，无需另装独立副本。
 
-## 安装 / Installation
+Renames the project and NRO, retains the paired-dining fallback introduced in v0.1, and adds identity-based six-frame PNG/Bundle support for missing native Loading dots. Corrects material recreation and texture lifetime across repeated Loading screens. An author-made Lumera sheet is provided as a downloadable README example with setup instructions. MOD creators must make their own six-frame sheets for other characters. Standard builds emit no plugin diagnostic logs.
 
-先安装 [Cobalt](https://github.com/Raytwo/Cobalt)。下载 `engage_dining_pair_fix.nro`，放入 `engage/mods/engage-dining-pair-fix/`，完整重启游戏。如果整合包已包含本插件，使用包内版本，避免重复加载。
-
-Install Cobalt first. Place `engage_dining_pair_fix.nro` in `engage/mods/engage-dining-pair-fix/` and fully restart the game. Use the included copy when an integration package already provides the plugin.
-
-基线 / Baseline: Fire Emblem Engage 2.0.0 / Cobalt 1.31.0.
-
-## 验证 / Validation
-
-当前 NRO 来自现用12人＋龙妈整合包，二进制内容保持。 / Existing binary from the current 12 Emblems + Lumera integration package, preserved unchanged.
-
-SHA-256: `bf386bc627154e580083f860ed3f3253093e0203d05fac88bd56a32d0cfa7ed3`；下载资产含 `SHA256SUMS`。
-
-许可、来源与致谢见仓库 LICENSE、NOTICE、THIRD_PARTY.md 和 README。
-See LICENSE, NOTICE, THIRD_PARTY.md and README for licensing, origins and credits.
+Remove engage_dining_pair_fix.nro when upgrading and fully restart. If your mod collection already includes this plugin, use that copy without a separate installation.
