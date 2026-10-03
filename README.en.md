@@ -19,13 +19,13 @@ The current binary targets Fire Emblem Engage 2.0.0 with Cobalt 1.31.0 as its co
 
 The screenshot below shows the opening scene of a paired meal involving a custom added character. In the author's tests, affected pairs frequently freeze after this scene when the patch is absent. Some pairs lack a dedicated conversation label; the original flow receives an empty label and cannot continue normally. This patch falls back to the native meal-evaluation dialogue selection at that point.
 
-![Paired-dining opening scene: affected pairs may freeze after this scene](images/paired-dining-opening-before-dialogue.png)
+![Paired-dining opening scene: affected pairs may freeze after this scene](images/paired-dining-opening-before-dialogue.jpg)
 
 With the patch enabled, the following screenshots show this pair continuing into normal meal-evaluation dialogue. Support notifications shown here belong to the normal game flow. The patch prevents a missing conversation label from blocking the meal; it does not create extra support events.
 
-![Alear's meal-evaluation dialogue continues after the fix](images/paired-dining-dialogue-alear.png)
+![Alear's meal-evaluation dialogue continues after the fix](images/paired-dining-dialogue-alear.jpg)
 
-![Eirika's meal-evaluation dialogue continues after the fix](images/paired-dining-dialogue-eirika.png)
+![Eirika's meal-evaluation dialogue continues after the fix](images/paired-dining-dialogue-eirika.jpg)
 
 ## Download and Installation
 

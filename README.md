@@ -19,13 +19,13 @@
 
 下图为自定义新增角色参与双人用餐的开场界面。根据作者实测，没有本补丁时，受影响组合大概率在此界面结束、准备进入后续对话时卡死。部分组合缺少专用双人对话标签，原流程取到空标签后无法正常继续；本补丁在此处改用原生料理评价台词回退。
 
-![双人用餐开场：受影响组合可能在这一界面结束后卡住](images/paired-dining-opening-before-dialogue.png)
+![双人用餐开场：受影响组合可能在这一界面结束后卡住](images/paired-dining-opening-before-dialogue.jpg)
 
 启用补丁后，下面两张截图展示了这组角色继续进入正常用餐评价对话的过程。截图中的支援提示是正常游戏流程的显示，本补丁的作用是避免缺失对话标签阻断用餐，不额外创建支援事件。
 
-![修复后继续进入琉尔的用餐评价对话](images/paired-dining-dialogue-alear.png)
+![修复后继续进入琉尔的用餐评价对话](images/paired-dining-dialogue-alear.jpg)
 
-![修复后继续进入艾莉可的用餐评价对话](images/paired-dining-dialogue-eirika.png)
+![修复后继续进入艾莉可的用餐评价对话](images/paired-dining-dialogue-eirika.jpg)
 
 ## 下载与安装
 
