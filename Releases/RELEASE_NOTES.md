@@ -1,3 +1,15 @@
+# v0.3 — Engage Custom Unit Support
+
+- 特技继承选人页右侧的牵绊等级面板向下延伸至屏幕底部附近，同步增加内容及背景的行高，缓解文字拥挤。
+- 修正新增纹章士后，特技继承界面条目显示不全及翻页卡住的问题。
+- 面板最多显示 22 项，采用两列、11 行布局；继承详情预留 30 个导航槽，仅显示实际持有的纹章士。
+- 包含特技继承翻页越界保护、双人用餐对话回退和六帧 PNG Loading 小人支持。
+- 更新时替换完整 ZIP，并完整重启游戏。使用本插件的整合包无需再安装独立副本。
+
+Expands the skill-inheritance lists to address missing entries and freezes when navigating added emblems. The bond-level panel on the inheritance unit-selection screen now extends near the bottom of the screen, with taller content and background rows. It supports 22 entries in two columns and 11 rows. Inheritance details retain 30 navigation slots and display only owned emblems. Navigation bounds protection, paired-dining fallback and six-frame PNG Loading support are included. Replace the complete ZIP and fully restart the game. If your mod collection includes this plugin, no separate copy is needed.
+
+---
+
 # v0.2 — Engage Custom Unit Support
 
 - 项目由 engage-dining-pair-fix 更名为 engage-custom-unit-support；NRO 更名为 engage_custom_unit_support.nro。

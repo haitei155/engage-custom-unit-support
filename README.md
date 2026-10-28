@@ -2,13 +2,25 @@
 
 [English](README.en.md)
 
-**v0.2** · 双人用餐对话回退与六帧 PNG Loading 小人支持。
+**v0.3** · 特技继承列表扩展、双人用餐对话回退与六帧 PNG Loading 小人支持。
 
 **必须先安装 [Cobalt](https://github.com/Raytwo/Cobalt)。** 感谢 **Raytwo** 开发并维护 Cobalt，为本项目提供 MOD 加载与扩展基础。
 
 当前编译版面向《火焰纹章 Engage》2.0.0，使用 Cobalt 1.31.0 作为兼容基线。
 
-## v0.2 新增内容
+## v0.3 新增内容
+
+### 特技继承列表扩展
+
+添加纹章士后，选人页右侧“与纹章士的牵绊等级”面板可能放不下全部条目；进入继承详情后，翻到第 20 项之后也可能卡住。两处界面分别受原有 19 个显示格和 20 个导航槽限制。
+
+v0.3 将右侧牵绊面板扩为 **22 项，两列、11 行**，同时补足背景行。面板向下延伸至屏幕底部附近，并增加行高，缓解文字拥挤。持有超过 22 枚纹章士时，该面板最多显示 22 项。
+
+继承详情页预置 **30 个导航槽**，保留原生排序、左右切换和首尾循环；圆点行缩小至原来的三分之二，以容纳 30 个槽。超过 30 项时需继续扩展界面资源。仅显示实际持有的纹章士，不会额外获得戒指、技能或牵绊等级。
+
+本功能需要同时安装 NRO 和配套的三个界面 Bundle。控件在资源中预先扩好，进入页面时由游戏原生流程初始化；NRO 为导航增加越界保护。更新后须完整重启游戏。
+
+## v0.2 功能
 
 ### 六帧 PNG Loading 小人
 
@@ -50,10 +62,10 @@ Loading 模式、邀请参与者、出场队列和六帧动画继续使用原生
 
 ## 下载与安装
 
-v0.2 编译版：[`engage_custom_unit_support.nro`](Releases/engage_custom_unit_support.nro)；校验值见 [SHA256SUMS](Releases/SHA256SUMS)。
+v0.3 编译版：[`engage_custom_unit_support.zip`](Releases/engage_custom_unit_support.zip)；校验值见 [SHA256SUMS](Releases/SHA256SUMS)。
 
 1. 先按 Cobalt 的说明安装基础运行环境。
-2. 将新版 NRO 放在 `engage/mods/engage-custom-unit-support/` 下，完整重启游戏。
+2. 将完整 ZIP 放入 `engage/mods/`，或将其内容解压至 `engage/mods/engage-custom-unit-support/`，完整重启游戏。只替换 NRO 不会扩展界面容量。
 3. **升级时移除旧 `engage_dining_pair_fix.nro`。** 新旧名称包含同一用餐钩子，不可同时运行。如果所使用的整合包已包含本插件，使用包内版本即可，无需另装独立副本。
 4. Loading PNG 留在对应人物包中；单独安装 NRO 不会增加人物素材。
 
@@ -63,7 +75,7 @@ v0.2 编译版：[`engage_custom_unit_support.nro`](Releases/engage_custom_unit_
 
 ## 源码与构建
 
-见 [构建说明](docs/BUILD.md)。源码包括两项功能实现和实际使用的本地依赖快照；构建产物输出到 `dist/`。`Releases/` 保存 v0.2 编译版与校验值。
+见 [构建说明](docs/BUILD.md)。源码包括特技继承列表扩展、双人用餐回退、Loading 素材支持和实际使用的本地依赖快照；构建产物输出到 `dist/`。`Releases/` 保存 v0.3 编译版与校验值。
 
 ## 许可与致谢
 

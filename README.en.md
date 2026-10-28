@@ -2,13 +2,25 @@
 
 [简体中文](README.md)
 
-**v0.2** · Paired-dining dialogue fallback and six-frame PNG Loading dots.
+**v0.3** · Expanded skill-inheritance lists, paired-dining dialogue fallback and six-frame PNG Loading dots.
 
 **Install [Cobalt](https://github.com/Raytwo/Cobalt) first.** Thank you to **Raytwo** for developing and maintaining Cobalt and providing the mod-loading foundation used by this project.
 
 The current binary targets Fire Emblem Engage 2.0.0 with Cobalt 1.31.0 as its compatibility baseline.
 
-## New in v0.2
+## New in v0.3
+
+### Expanded skill-inheritance lists
+
+With added emblems, the bond-level panel on the unit-selection screen can run out of entries, and moving past the 20th emblem in the inheritance details can freeze the menu. The two screens have separate limits: 19 display entries and 20 navigation indicators.
+
+v0.3 expands the bond-level panel to **22 entries in two columns and 11 rows**, adds the corresponding background row, extends the panel down near the bottom of the screen, and increases row height to give the text more space. If more than 22 emblems are owned, this panel displays at most 22 entries.
+
+The inheritance details provide **30 navigation slots**. Native sorting, left/right navigation and wraparound remain in use. The indicator row scales to two thirds of its original size to accommodate 30 slots. Lists beyond 30 require further UI resource expansion. Only owned emblems appear; the plugin does not grant rings, skills or bond levels.
+
+Install both the NRO and the three companion UI Bundles. Controls are expanded in the resources and initialized by the native game flow; the NRO adds a navigation bounds guard. Fully restart the game after updating.
+
+## v0.2 Features
 
 ### Six-frame Loading dots
 
@@ -50,10 +62,10 @@ With the patch enabled, the following screenshots show this pair continuing into
 
 ## Download and Installation
 
-v0.2 binary: [`engage_custom_unit_support.nro`](Releases/engage_custom_unit_support.nro); checksums: [SHA256SUMS](Releases/SHA256SUMS).
+v0.3 binary: [`engage_custom_unit_support.zip`](Releases/engage_custom_unit_support.zip); checksums: [SHA256SUMS](Releases/SHA256SUMS).
 
 1. Install the prerequisite runtime using Cobalt's instructions.
-2. Place the new NRO in `engage/mods/engage-custom-unit-support/` and fully restart the game.
+2. Place the complete ZIP in `engage/mods/`, or extract its contents into `engage/mods/engage-custom-unit-support/`, and fully restart the game. Replacing only the NRO does not expand the UI capacity.
 3. **Remove the old `engage_dining_pair_fix.nro` when upgrading.** Old and new names contain the same dining hook and must not run together. If your mod collection already includes this plugin, use that copy without a separate installation.
 4. Keep Loading PNG resources in the corresponding character package; installing only the NRO does not add artwork.
 
@@ -63,7 +75,7 @@ Previously named `engage-dining-pair-fix`, this project is now `engage-custom-un
 
 ## Source and Build
 
-See [Build instructions](docs/BUILD.md). The source includes both features and the local dependencies used by them. Builds go to `dist/`; `Releases/` contains the v0.2 binary and its checksum.
+See [Build instructions](docs/BUILD.md). The source includes skill-inheritance list expansion, paired-dining fallback, Loading resource support and their local dependencies. Builds go to `dist/`; `Releases/` contains the v0.3 binary and its checksum.
 
 ## License and Credits
 

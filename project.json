@@ -6,9 +6,9 @@
   "game_version": "2.0.0",
   "cobalt_baseline": "1.31.0",
   "license": "Apache-2.0 (project-owned contributions; see THIRD_PARTY.md)",
-  "prepared": "2026-10-03",
-  "source_status": "Paired-dining fallback and six-frame Loading dot support, v0.2.0.",
-  "release_tag": "v0.2",
+  "prepared": "2026-10-29",
+  "source_status": "Taller 22-entry bond panel, skill-inheritance navigation, paired dining and Loading support, v0.3.0.",
+  "release_tag": "v0.3",
   "repository": "https://github.com/haitei155/engage-custom-unit-support",
-  "version": "0.2.0"
+  "version": "0.3.0"
 }

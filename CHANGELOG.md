@@ -1,5 +1,13 @@
 # 更新记录 / Changelog
 
+## v0.3 — 2026-10-29
+
+- 选人页右侧牵绊面板由 19 项扩为 22 项，使用两列、11 行布局，并补足背景行；面板向下延伸至屏幕底部附近，增加内容与背景行高，缓解文字拥挤。
+- 通过配套界面资源将继承详情页扩为 30 个导航槽，仅显示实际持有数量；缩小圆点行，并为导航索引增加越界保护。
+- 沿用原生纹章士排序、左右切换与首尾循环，不改技能、SP 消耗或牵绊等级。
+
+Expands the bond-level panel from 19 to 22 entries in two columns and 11 rows. The panel extends near the bottom of the screen, with taller content and background rows. Companion UI resources provide 30 inheritance navigation slots, showing only the owned emblems. Scales the indicator row to fit and guards navigation indices, preserving native sorting, left/right navigation, wraparound, skills, SP costs and bond levels.
+
 ## v0.2 — 2026-10-03
 
 - 项目／NRO 改名为 engage-custom-unit-support／engage_custom_unit_support.nro；保留 v0.1 的双人用餐回退。

@@ -23,10 +23,24 @@ The first build may download dependencies locked in Cargo.lock. Add `--offline` 
 - `tools/rustc-wrapper.rs` supplies `-Zunstable-options` for the custom target.
 - `tools/build.py` resolves the linker script relative to this project at build time.
 - Generated `dist/*.nro` is a new build, and need not be byte-identical to `Releases/*.nro` because package names, paths or compiler metadata can differ.
-- v0.2 crate/output: `engage_custom_unit_support` / `dist/engage_custom_unit_support.nro`. `Releases/` contains the v0.2 binary and SHA256SUMS. Build output and release checksums identify the corresponding artifact.
+- v0.3 crate/output: `engage_custom_unit_support` / `dist/engage_custom_unit_support.nro`. `Releases/` contains the v0.3 binary and SHA256SUMS. Build output and release checksums identify the corresponding artifact.
 
 ## 主机工具编译器 / Host compiler
 
 ELF 转 NRO 工具的锁定依赖要求比旧版 stable 更新的 Rust。本脚本默认使用 `nightly-2026-02-14` 编译主机工具；可通过 `--host-toolchain` 指定已安装的兼容 Rust，不自动升级本机 stable。
 
 Locked converter dependencies require a Rust compiler newer than some old stable installations. The script defaults to `nightly-2026-02-14` for host tools; override with `--host-toolchain` using an installed compatible compiler. It does not upgrade the machine's stable toolchain.
+
+## 继承界面资源 / Inheritance UI resources
+
+NRO 构建不包含界面资源。使用 UnityPy 1.25.3 和本机 Engage 2.0.0 RomFS 生成三个配套 Bundle：
+
+The NRO build does not include the UI resources. Generate the three companion Bundles with UnityPy 1.25.3 and your Engage 2.0.0 RomFS:
+
+```powershell
+python tools/build_inheritance_ui.py --romfs "PATH/TO/RomFS"
+```
+
+输出在 `resources/inheritance/Data/`，保留目录结构，与 NRO 一起打包。脚本校验原条目数量、未改对象字节、新对象类型和本地引用；生成资源沿用游戏资源的权利归属，不适用本项目代码许可。
+
+Output goes to `resources/inheritance/Data/`. Preserve this structure when packaging it with the NRO. The script validates original counts, unchanged object bytes, new object types and local references. Generated resources retain the game assets' rights and are outside the project code license.

@@ -1,5 +1,6 @@
-//! Native dining label fallback plus optional Loading dot resources for custom units.
+//! Skill-inheritance list expansion, native dining fallback and custom Loading dots.
 mod loading_dots;
+mod skill_inheritance;
 #[cfg(feature = "diagnostics")]
 use std::io::Write;
 type P = *mut u8;
@@ -56,5 +57,6 @@ pub fn main() {
     }
     skyline::install_hooks!(fee_dining_v3_label);
     loading_dots::install();
+    skill_inheritance::install();
     trace!("installed ONE label fallback hook; no cooking-stage or outfit hooks");
 }

@@ -18,3 +18,10 @@ The root Apache-2.0 license applies to project-owned additions and documentation
 Cargo.lock 记录其余 Cargo 依赖及精确版本；这些依赖保持其上游许可。公开发布前需审阅整合发行的许可范围，尤其是 GPL 依赖和没有明确许可的上游部分。
 
 Cargo.lock records other Cargo dependencies and their exact versions; their original terms continue to apply. Review the combined distribution terms before publication, especially GPL dependencies and upstream portions without explicit licensing.
+
+
+## 继承界面资源 / Inheritance UI resources
+
+`resources/inheritance/Data/` 中的三个 Bundle 由 Engage 2.0.0 界面资源调整而来，使用 `tools/build_inheritance_ui.py` 生成。原始游戏资源的权利归原权利人，不适用本项目 Apache-2.0 许可。构建脚本使用 UnityPy（MIT），需单独安装。
+
+The three Bundles under `resources/inheritance/Data/` are modified Engage 2.0.0 UI assets generated with `tools/build_inheritance_ui.py`. Original game assets retain their rights and are outside the project Apache-2.0 license. The build script requires a separate installation of UnityPy (MIT).
